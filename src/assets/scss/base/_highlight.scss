@@ -1,0 +1,18 @@
+// -----------------------------------------------------------------------------
+// Highlight
+// -----------------------------------------------------------------------------
+
+$highlight-color: $primary;
+// classes must remain separate below
+
+// WebKit/Blink Browsers
+::selection {
+    background: $highlight-color;
+    color: $white;
+}
+
+// Gecko Browsers
+::-moz-selection {
+    background: $highlight-color;
+    color: $white;
+}
