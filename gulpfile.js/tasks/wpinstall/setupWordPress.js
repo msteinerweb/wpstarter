@@ -28,8 +28,20 @@ async function setupWordPress() {
     // set plugins
     await execa('wp', ['plugin', 'uninstall', '--all', '--deactivate'], execOptions);
 
+    const pluginCommands = [];
+    for (const plugin of config.plugins) {
+        pluginCommands.push(await execa('wp', ['plugin', 'install', plugin, '--activate'], execOptions));
+    }
+    await Promise.all(pluginCommands);
+
+
     // remove default posts
     await execa('wp', ['post', 'delete', 1, 2, 3, '--force'], execOptions);
+
+    // set our theme and get rid of the other default themes
+    await execa('wp', ['theme', 'activate', config.site.theme_name], execOptions);
+    await execa('wp', ['theme', 'uninstall', '--all'], execOptions);
+
 };
 
 module.exports = setupWordPress;

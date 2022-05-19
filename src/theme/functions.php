@@ -6,10 +6,6 @@ add_theme_support('post-thumbnails');
 // add_image_size('resource-thumbnail', 400, 250, true);
 
 
-require_once(dirname(__FILE__) . '/inc/debug/print.php'); // print data browser
-
-
-
 // disable default settings
 require_once(dirname(__FILE__) . '/inc/disable/comments.php'); // removes the ability for posts
 require_once(dirname(__FILE__) . '/inc/disable/defaults-admin-bar.php'); // disables admin bar defaults
