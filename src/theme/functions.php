@@ -25,16 +25,6 @@ require_once(dirname(__FILE__) . '/inc/disable/defaults-meta-boxes.php'); // dis
 require_once(dirname(__FILE__) . '/inc/disable/defaults-widgets.php'); // disables default widgets provided by wordpress
 require_once(dirname(__FILE__) . '/inc/disable/admin-footer-text.php'); // Admin footer modification
 
-// custom settings
-// require_once(dirname(__FILE__) . '/inc/custom/posts/index.php'); // custom posts
-// require_once(dirname(__FILE__) . '/inc/custom/excerpt.php'); // custom excerpt settings
-
-// widgetize theme
-// require_once(dirname(__FILE__) . '/inc/widgetized-areas.php');
-
-// add sub menu nav walker
-// require_once(dirname(__FILE__) . '/inc/sub-menu-walker.php');
-
 // register navigation
 require_once(dirname(__FILE__) . '/inc/register-navigation.php');
 
@@ -46,3 +36,13 @@ require_once(dirname(__FILE__) . '/inc/hide-notices.php');
 
 // allow editor to edit menus
 // require_once(dirname(__FILE__) . '/inc/editor-edit-menus.php');
+
+// custom settings
+// require_once(dirname(__FILE__) . '/inc/custom/posts/index.php'); // custom posts
+// require_once(dirname(__FILE__) . '/inc/custom/excerpt.php'); // custom excerpt settings
+
+// widgetize theme
+// require_once(dirname(__FILE__) . '/inc/widgetized-areas.php');
+
+// add sub menu nav walker
+// require_once(dirname(__FILE__) . '/inc/sub-menu-walker.php');

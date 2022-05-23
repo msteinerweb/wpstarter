@@ -3,7 +3,7 @@
         "src/assets/ts/main.ts"
     ],
     "compilerOptions": {
-      "noImplicitAny": true,
-      "target": "es5"
+        "noImplicitAny": true,
+        "target": "es5"
     }
 }
