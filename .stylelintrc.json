@@ -2,5 +2,10 @@
     "extends": "stylelint-config-standard-scss",
     "plugins": [
         "stylelint-scss"
-    ]
+    ],
+    "rules": {
+        "indentation": 4,
+        "scss/double-slash-comment-empty-line-before": null,
+        "scss/no-global-function-names": null
+    }
 }
