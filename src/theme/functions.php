@@ -19,6 +19,7 @@ add_action('wp_enqueue_scripts', 'include_resources');
 
 
 // disable default settings
+require_once(dirname(__FILE__) . '/inc/disable/posts.php'); // disables default post type if not blog
 require_once(dirname(__FILE__) . '/inc/disable/comments.php'); // removes the ability for posts
 require_once(dirname(__FILE__) . '/inc/disable/defaults-admin-bar.php'); // disables admin bar defaults
 require_once(dirname(__FILE__) . '/inc/disable/defaults-meta-boxes.php'); // disables default metaboxes on home page
