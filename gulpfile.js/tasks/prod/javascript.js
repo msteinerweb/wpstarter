@@ -14,7 +14,7 @@ function javascript() {
         .pipe(babel({ presets: ['@babel/preset-env'] }))
         .pipe(concat('main.js'))
         .pipe(uglify())
-        .pipe(dest(`./build/wordpress/wp-content/themes/${site.theme_name}/js`));
+        .pipe(dest(`./dist/themes/${site.theme_name}/js`));
 }
 
 module.exports = javascript;
