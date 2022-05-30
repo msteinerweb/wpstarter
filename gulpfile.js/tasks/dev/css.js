@@ -14,7 +14,7 @@ async function css() {
         .pipe(sourcemaps.init())
         .pipe(sass({
             includePaths: 'node_modules',
-        }))
+        }).on('error', sass.logError))
         .pipe(sourcemaps.write('.'))
         .pipe(gulpHeader(themeComment))
         .pipe(dest(`./build/wordpress/wp-content/themes/${site.theme_name}`))
