@@ -1,4 +1,4 @@
-const { site, themeComment } = require('../../../config');
+const { site, themeComment } = require('../../config');
 const { src, dest } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const dart = require('dart-sass');

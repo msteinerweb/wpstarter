@@ -1,4 +1,4 @@
-const { site } = require('../../../config');
+const { site } = require('../../config');
 const { watch, series } = require('gulp');
 const connect = require('gulp-connect-php');
 const browserSync = require('browser-sync');

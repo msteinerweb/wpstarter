@@ -1,5 +1,5 @@
 const { src, dest } = require('gulp');
-const { site } = require("../../../config");
+const { site } = require("../../config");
 
 
 async function fonts() {

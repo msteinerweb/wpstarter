@@ -1,4 +1,4 @@
-const { site } = require("../../../config");
+const { site } = require("../../config");
 const { src, dest } = require('gulp');
 const gulpReplace = require('gulp-replace');
 

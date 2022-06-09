@@ -1,4 +1,4 @@
-const { site } = require('../../../config');
+const { site } = require('../../config');
 const { dest, src } = require('gulp');
 const imagemin = require('gulp-imagemin');
 
