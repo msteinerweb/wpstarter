@@ -15,8 +15,8 @@ async function css() {
         .pipe(sass({
             includePaths: 'node_modules',
         }).on('error', sass.logError))
-        .pipe(sourcemaps.write('.'))
         .pipe(gulpHeader(themeComment))
+        .pipe(sourcemaps.write('.'))
         .pipe(dest(`./build/wordpress/wp-content/themes/${site.theme_name}`))
         .pipe(browserSync.stream({ match: '**/*.css' }));
 }
