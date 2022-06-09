@@ -1,10 +1,23 @@
 const { site } = require("../../../config");
 const { src, dest } = require('gulp');
+const gulpReplace = require('gulp-replace');
 
 function theme() {
-    return src(['./src/theme/**', '!./src/theme/**/node_modules/**']).pipe(
-        dest(`./dist/themes/${site.theme_name}`),
+    return src(['./src/theme/**', '!./src/theme/**/node_modules/**'])
+        .pipe(gulpReplace('{{VERSION}}', timeToVersion()))
+        .pipe(dest(`./dist/themes/${site.theme_name}`)
     );
+}
+
+function timeToVersion() {
+    const date = new Date();
+    const year = date.getFullYear();
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const day = date.getDate().toString().padStart(2, '0');
+    const hour = date.getHours().toString().padStart(2, '0');
+    const minute = date.getMinutes().toString().padStart(2, '0');
+    const second = date.getSeconds().toString().padStart(2, '0');
+    return `${year}-${month}-${day}_${hour}:${minute}:${second}`;
 }
 
 module.exports = theme;
