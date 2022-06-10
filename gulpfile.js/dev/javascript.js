@@ -10,9 +10,9 @@ const tsProject = ts.createProject('tsconfig.json');
 function javascript() {
 
     return tsProject.src()
+        .pipe(sourcemaps.init())
         .pipe(tsProject())
         .js
-        .pipe(sourcemaps.init())
         .pipe(babel({ presets: ['@babel/preset-env'] }))
         .pipe(concat('main.js'))
         .pipe(sourcemaps.write('.'))
