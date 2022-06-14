@@ -8,7 +8,6 @@ const tsProject = ts.createProject('tsconfig.json');
 
 
 function javascript() {
-
     return tsProject.src()
         .pipe(sourcemaps.init())
         .pipe(tsProject())
@@ -18,5 +17,6 @@ function javascript() {
         .pipe(sourcemaps.write('.'))
         .pipe(dest(`./build/wordpress/wp-content/themes/${site.theme_name}/js`));
 }
+
 
 module.exports = javascript;

@@ -8,7 +8,6 @@ const browserSync = require('browser-sync');
 
 sass.compiler = dart;
 
-
 async function css() {
     return await src('./src/assets/scss/style.scss')
         .pipe(sourcemaps.init())
@@ -20,5 +19,6 @@ async function css() {
         .pipe(dest(`./build/wordpress/wp-content/themes/${site.theme_name}`))
         .pipe(browserSync.stream({ match: '**/*.css' }));
 }
+
 
 module.exports = css;

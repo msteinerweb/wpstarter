@@ -8,4 +8,5 @@ async function fonts() {
     );
 }
 
+
 module.exports = fonts;

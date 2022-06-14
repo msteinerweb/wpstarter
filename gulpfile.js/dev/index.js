@@ -8,6 +8,7 @@ const fonts = require('./fonts');
 const plugins = require('./plugins');
 const serve = require('./serve');
 
+
 module.exports = series([
     theme,
     css,
