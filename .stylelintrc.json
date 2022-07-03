@@ -5,8 +5,8 @@
     ],
     "rules": {
         "indentation": 4,
-        "indent-type": "space",
         "max-empty-lines": 2,
+        "declaration-no-important": true,
         "scss/double-slash-comment-empty-line-before": null,
         "scss/no-global-function-names": null
     }
