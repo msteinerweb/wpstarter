@@ -15,7 +15,7 @@ config.database = {};
 config.database.dbname = 'test';
 config.database.dbuser = 'root';
 config.database.dbpass = '123456789';
-config.database.dbhost = '127.0.0.1';
+config.database.dbhost = 'localhost';
 config.database.dbprefix = 'wp_';
 
 
@@ -36,6 +36,7 @@ config.themeComment = `
 /*
 Theme Name: ${config.site.theme_name}
 Description: Built using WPStarter
+Version: {{VERSION}}
 */
 `;
 
