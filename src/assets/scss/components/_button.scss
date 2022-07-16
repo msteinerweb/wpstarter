@@ -9,7 +9,7 @@
     font-weight: 600;
 
     &:hover {
-        color: contrast-color($gray-200);
+        color: contrast-color($default-btn-color);
         background-color: darken($default-btn-color, 5%);
         text-decoration: none;
     }

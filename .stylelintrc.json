@@ -7,6 +7,10 @@
         "indentation": 4,
         "max-empty-lines": 2,
         "color-hex-case": "upper",
+        "font-family-no-missing-generic-family-keyword": [
+            true, {
+            "ignoreFontFamilies": ["/^(Font Awesome)/"]
+        }],
         "declaration-no-important": true,
         "scss/double-slash-comment-empty-line-before": null,
         "scss/no-global-function-names": null,
