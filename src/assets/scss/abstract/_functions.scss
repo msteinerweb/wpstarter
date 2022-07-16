@@ -1,2 +1,27 @@
 // Vendor
 @import "bootstrap/scss/functions";
+
+/*
+ * Checks the first color that is passed in to see how light it is.
+ * If it is considered light, return the dark color.
+ * If it is considered dark, return the light color.
+ *
+ * Usage:
+ * section {
+ *     color: contrast-color($btnColor);
+ *     color: contrast-color($btnColor, $lightColor, $darkColor);
+ * }
+ */
+@function contrast-color(
+    $colorToCheck,
+    $lightColor: #FFF,
+    $darkColor: #000) {
+    $result: $darkColor;
+    $lightness: lightness($colorToCheck);
+
+    @if $lightness < 57.5 {
+        $result: $lightColor;
+    }
+
+    @return $result;
+}

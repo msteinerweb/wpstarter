@@ -1,0 +1,29 @@
+.btn {
+    $default-btn-color: $gray-200;
+
+    padding: 10px 60px;
+    background-color: $default-btn-color;
+    color: contrast-color($default-btn-color);
+    display: inline-block;
+    border-radius: 50px;
+    font-weight: 600;
+
+    &:hover {
+        color: contrast-color($gray-200);
+        background-color: darken($default-btn-color, 5%);
+        text-decoration: none;
+    }
+
+    // loop through brand colors
+    @each $brand-color-name, $brand-color in $brand-colors {
+        &.btn-#{$brand-color-name} {
+            background-color: $brand-color;
+            color: contrast-color($brand-color);
+
+            &:hover {
+                background-color: darken($brand-color, 5%);
+                color: contrast-color($brand-color);
+            }
+        }
+    }
+}
