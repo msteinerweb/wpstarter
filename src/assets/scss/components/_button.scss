@@ -1,17 +1,30 @@
 .btn {
     $default-btn-color: $gray-200;
+    $btn-padding-x: 10px;
+    $btn-padding-y: 40px;
+    $darken-on-hover: 5%;
 
-    padding: 10px 60px;
+    padding: $btn-padding-x $btn-padding-y;
     background-color: $default-btn-color;
     color: contrast-color($default-btn-color);
     display: inline-block;
     border-radius: 50px;
-    font-weight: 600;
 
     &:hover {
         color: contrast-color($default-btn-color);
-        background-color: darken($default-btn-color, 5%);
+        background-color: darken($default-btn-color, $darken-on-hover);
         text-decoration: none;
+    }
+
+    &.btn-arrow {
+        padding-right: $btn-padding-y - 10px;
+
+        &::after {
+            content: "\f054";
+            font-family: "Font Awesome 5 Free";
+            color: contrast-color($default-btn-color);
+            padding-left: 15px;
+        }
     }
 
     // loop through brand colors
@@ -21,7 +34,11 @@
             color: contrast-color($brand-color);
 
             &:hover {
-                background-color: darken($brand-color, 5%);
+                background-color: darken($brand-color, $darken-on-hover);
+                color: contrast-color($brand-color);
+            }
+
+            &.btn-arrow::after {
                 color: contrast-color($brand-color);
             }
         }
