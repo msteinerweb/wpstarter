@@ -1,17 +1,17 @@
 // Vendor
-@import 'bootstrap/scss/mixins';
+@import "bootstrap/scss/mixins";
 
 /*
  * Usage:
  * section {
- *     @include background-tinted($white, .75, '../img/home/picture.jpg');
+ *     @include background-tinted($white, .75, "../img/home/picture.jpg");
  * }
  */
- @mixin background-tinted($color, $opacity, $background-url) {
-  background:
-      linear-gradient(
-          rgba($color, $opacity),
-          rgba($color, $opacity)
-      ),
-      url($background-url);
+@mixin background-tinted($color, $opacity, $background-url) {
+    background:
+        linear-gradient(
+            rgba($color, $opacity),
+            rgba($color, $opacity)
+        ),
+        url($background-url);
 }

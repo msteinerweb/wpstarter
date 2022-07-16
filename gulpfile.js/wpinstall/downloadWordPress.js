@@ -2,7 +2,7 @@ const execa = require('execa');
 const fs = require('fs');
 const path = require('path');
 
-const wppath = path.join(__dirname, '../../../build/wordpress');
+const wppath = path.join(__dirname, '../../build/wordpress');
 const execOptions = { cwd: wppath, };
 
 async function downloadWordPress() {

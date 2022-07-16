@@ -6,7 +6,7 @@ const path = require('path');
 const url = 'http://127.0.0.1:3020';
 
 
-const wppath = path.join(__dirname, '../../../build/wordpress');
+const wppath = path.join(__dirname, '../../build/wordpress');
 const execOptions = { cwd: wppath, };
 
 async function setupWordPress() {
