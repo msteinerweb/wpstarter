@@ -1,0 +1,67 @@
+{
+    "version": 2,
+    "settings": {
+        "appearanceTools": false,
+        "border": {
+            "color": false,
+            "radius": false,
+            "style": false,
+            "width": false
+        },
+        "color": {
+            "text": false,
+            "background": false,
+            "link": false,
+            "custom": false,
+            "customDuotone": false,
+            "customGradient": false,
+            "defaultDuotone": false,
+            "defaultGradients": false,
+            "defaultPalette": false,
+            "palette": [
+                {
+                    "name": "Primary",
+                    "slug": "primary",
+                    "color": "#244458"
+                },
+                {
+                    "name": "Secondary",
+                    "slug": "secondary",
+                    "color": "#8A3232"
+                },
+                {
+                    "name": "Tertiary",
+                    "slug": "tertiary",
+                    "color": "#F3AE3D"
+                },
+                {
+                    "name": "Quaternary",
+                    "slug": "quaternary",
+                    "color": "#8EA67E"
+                }
+            ]
+        },
+        "layout": {
+            "contentSize": null,
+            "wideSize": null
+        },
+        "spacing": {
+            "blockGap": null,
+            "margin": false,
+            "padding": false,
+            "units": []
+        },
+        "typography": {
+            "customFontSize": false,
+            "fontStyle": false,
+            "fontWeight": false,
+            "letterSpacing": false,
+            "lineHeight": false,
+            "textDecoration": false,
+            "textTransform": false,
+            "dropCap": false,
+            "fontSizes": [],
+            "fontFamilies": []
+        }
+    }
+}
