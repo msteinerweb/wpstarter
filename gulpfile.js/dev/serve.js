@@ -21,7 +21,8 @@ function devServer() {
                 logPrefix: `🚀 ${site.title}`,
                 proxy: '127.0.0.1:3020',
                 port: '3010',
-                open: 'external',
+                open: 'local',
+                ghostMode: false,
             });
         },
     );
