@@ -15,6 +15,14 @@ function include_resources() {
 
     // include fontawesome
     wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css', array(), '5.15.4', 'all');
-
 }
 add_action('wp_enqueue_scripts', 'include_resources');
+
+
+// add page slug to body class
+function add_slug_body_class($classes) {
+    global $post;
+    if (isset($post)) $classes[] = $post->post_type . '-' . $post->post_name;
+    return $classes;
+}
+add_filter('body_class', 'add_slug_body_class');
