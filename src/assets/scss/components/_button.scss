@@ -8,12 +8,19 @@
     background-color: $default-btn-color;
     color: contrast-color($default-btn-color);
     display: inline-block;
-    border-radius: 50px;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    border: 0;
 
     &:hover {
         color: contrast-color($default-btn-color);
         background-color: darken($default-btn-color, $darken-on-hover);
         text-decoration: none;
+    }
+
+    &.btn-block {
+        width: 100%;
+        padding-inline: 0;
     }
 
     &.btn-arrow {
