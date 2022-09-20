@@ -3,6 +3,7 @@ const { src, dest } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const dart = require('dart-sass');
 const gulpHeader = require('gulp-header');
+const gulpReplace = require('gulp-replace');
 const timeToVersion = require("../util/timeToVersion");
 
 sass.compiler = dart;
