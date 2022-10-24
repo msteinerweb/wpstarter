@@ -28,7 +28,7 @@ function devServer() {
     );
 
     watch('./src/assets/scss/**/*.scss', css);
-    watch('./src/assets/ts/**', series(javascript, reload));
+    watch('./src/assets/js/**', series(javascript, reload));
     watch('./src/assets/img/**', series(img, reload));
     watch('./src/assets/fonts/**', series(fonts, reload));
     watch('./src/theme/**', series(theme, reload));
