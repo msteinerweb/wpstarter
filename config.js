@@ -28,6 +28,7 @@ config.options.start_of_week = 0;
 config.plugins = [
     // 'wpforms-lite',
     // 'wordpress-seo',
+    // 'all-in-one-wp-migration',
 ];
 
 
