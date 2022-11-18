@@ -1,23 +1,25 @@
 // Colors
-$primary-color: #244458;
-$secondary-color: #8A3232;
-$tertiary-color: #F3AE3D;
-$quaternary-color: #8EA67E;
+$color-primary: #244458;
+$color-secondary: #8A3232;
+$color-tertiary: #F3AE3D;
+$color-quaternary: #8EA67E;
 
 $brand-colors: (
-    primary: $primary-color,
-    secondary: $secondary-color,
-    tertiary: $tertiary-color,
-    quaternary: $quaternary-color
+    primary: $color-primary,
+    secondary: $color-secondary,
+    tertiary: $color-tertiary,
+    quaternary: $color-quaternary
 );
 
 // Typography
-$primary-font: -apple-system, blinkmacsystemfont, "Segoe UI", roboto,
+$font-primary: -apple-system, blinkmacsystemfont, "Segoe UI", roboto,
     "Helvetica Neue", arial, "Noto Sans", "Liberation Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$secondary-font: null;
-$font-family-sans-serif: $primary-font;
-$headings-font-family: $secondary-font;
+$font-secondary: null;
+$font-thirdary: null;
+
+$font-family-sans-serif: $font-primary;
+$headings-font-family: $font-secondary;
 
 
 // Body
