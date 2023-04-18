@@ -29,6 +29,7 @@ config.plugins = [
     // 'wpforms-lite',
     // 'wordpress-seo',
     // 'all-in-one-wp-migration',
+    // 'user-switching',
 ];
 
 
