@@ -1,15 +1,23 @@
 const { site } = require('../../config');
-const { dest, src } = require('gulp');
-const babel = require('gulp-babel');
+const { dest } = require('gulp');
+const browserify = require('browserify');
+const source = require('vinyl-source-stream');
+const buffer = require('vinyl-buffer');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 
 function javascript() {
-    return src('./src/assets/js/main.js')
-        .pipe(babel({
-            presets: ['@babel/preset-env'],
 
-        }))
+    const b = browserify({
+        entries: './src/assets/js/main.js',
+        debug: false,
+        transform: [['babelify', { presets: ['@babel/preset-env'] }]],
+    });
+
+    return b
+        .bundle()
+        .pipe(source('main.js'))
+        .pipe(buffer())
         .pipe(concat('main.js'))
         .pipe(uglify())
         .pipe(dest(`./dist/themes/${site.theme_name}/js`));
