@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <title><?php wp_title(' | ', 'echo', 'right'); ?></title>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=5.0,user-scalable=yes">
 
