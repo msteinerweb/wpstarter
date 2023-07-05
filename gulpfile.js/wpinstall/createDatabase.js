@@ -9,7 +9,6 @@ async function createDatabase() {
         user: database.dbuser,
         password: database.dbpass,
     });
-    await connection.query(`DROP DATABASE IF EXISTS ${database.dbname}`)
     await connection.query(`CREATE DATABASE IF NOT EXISTS ${database.dbname}`);
     await connection.close();
 }
