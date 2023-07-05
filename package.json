@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "wpinstall": "gulp wpinstall",
+    "wpbackup": "gulp wpbackup",
+    "wprestore": "gulp wprestore",
     "dev": "gulp dev",
     "prod": "gulp prod"
   },
