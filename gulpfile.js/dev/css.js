@@ -1,4 +1,3 @@
-const { site, themeComment } = require('../../config');
 const { src, dest } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const dart = require('dart-sass');
@@ -6,7 +5,9 @@ const sourcemaps = require('gulp-sourcemaps');
 const gulpHeader = require('gulp-header');
 const browserSync = require('browser-sync');
 const gulpReplace = require('gulp-replace');
-const timeToVersion = require("../util/timeToVersion");
+const timeToVersion = require('../util/timeToVersion');
+
+const { site, themeComment } = require('../../config');
 
 sass.compiler = dart;
 

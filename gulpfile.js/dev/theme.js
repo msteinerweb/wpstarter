@@ -1,7 +1,7 @@
-const { site } = require("../../config");
 const { src, dest } = require('gulp');
 const fs = require('fs');
 
+const { site } = require('../../config');
 
 function theme() {
     if (!fs.existsSync('./build')) {

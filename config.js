@@ -1,8 +1,7 @@
 
-const config = {}
+const config = {};
 
-
-config.site = {}
+config.site = {};
 config.site.title = 'Website Title';
 config.site.blogdescription = 'Just another WordPress site';
 config.site.theme_name = 'WPStarter';

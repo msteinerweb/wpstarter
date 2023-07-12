@@ -1,5 +1,6 @@
-const { site } = require('../../config');
 const { dest, src } = require('gulp');
+
+const { site } = require('../../config');
 
 function img() {
     return src('./src/assets/img/**')

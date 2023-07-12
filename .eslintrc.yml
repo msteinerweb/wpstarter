@@ -17,7 +17,7 @@ globals:
     jQuery: true
 
 parserOptions:
-    ecmaVersion: 2015
+    ecmaVersion: 2017
     sourceType: module
 
 rules:
@@ -32,12 +32,8 @@ rules:
         - warn
         - as-needed
 
-    # Always warn about using underscored variables instead of camelcase
-    camelcase:
-        - warn
-        - properties: always
-          ignoreDestructuring: false
-          ignoreImports: false
+    # Allow camelcase
+    camelcase: 0
 
     # Expects commas after functions
     comma-dangle:
