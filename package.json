@@ -32,6 +32,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
+    "gulp-webp": "^4.0.1",
     "gulp-zip": "^5.1.0",
     "mysql2": "^2.3.3",
     "postcss": "^8.4.14",

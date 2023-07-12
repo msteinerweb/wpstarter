@@ -10,6 +10,11 @@ config.site.admin_password = '123456789';
 config.site.admin_email = 'info@example.com';
 
 
+config.wpstarter = {};
+config.wpstarter.webp_support = true;
+config.wpstarter.phpbin = 'php';
+
+
 config.database = {};
 config.database.dbname = 'test';
 config.database.dbuser = 'root';

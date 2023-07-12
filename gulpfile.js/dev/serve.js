@@ -3,7 +3,7 @@ const browserSync = require('browser-sync');
 const path = require('path');
 const PhpDevelopmentServerConnection = require('../util/phpconnect');
 
-const { site } = require('../../config');
+const { site, wpstarter } = require('../../config');
 
 const css = require('./css');
 const javascript = require('./javascript');
@@ -19,7 +19,7 @@ function devServer() {
     const server = new PhpDevelopmentServerConnection({
         base: './build/wordpress',
         port: 3020,
-        bin: 'php', // 'php7.2' for example
+        bin: wpstarter.phpbin, // 'php7.2' for example
         ini: path.join(__dirname, '../../../php.ini'),
         logErrorsOnly: true,
     });
