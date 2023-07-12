@@ -1,7 +1,7 @@
 const { watch, series } = require('gulp');
 const browserSync = require('browser-sync');
 const path = require('path');
-const PhpDevelopmentServerConnection = require('./php/connect');
+const PhpDevelopmentServerConnection = require('../util/phpconnect');
 
 const { site } = require('../../config');
 
@@ -20,7 +20,7 @@ function devServer() {
         base: './build/wordpress',
         port: 3020,
         bin: 'php', // 'php7.2' for example
-        ini: path.join(__dirname, './php/php.ini'),
+        ini: path.join(__dirname, '../../../php.ini'),
         logErrorsOnly: true,
     });
 

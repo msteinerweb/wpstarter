@@ -15,7 +15,7 @@ const Status = {
     NEW: Symbol('NEW'),
     STARTING: Symbol('STARTING'),
     STARTED: Symbol('STARTED'),
-    FINISHED: Symbol('FINISHED')
+    FINISHED: Symbol('FINISHED'),
 };
 
 
@@ -41,7 +41,7 @@ class PhpDevelopmentServerConnection {
             debug: false,
             logErrorsOnly: false,
             ini: null,
-            ...opts
+            ...opts,
         };
     }
 
@@ -65,8 +65,8 @@ class PhpDevelopmentServerConnection {
             http.request({
                 method: 'HEAD',
                 hostname,
-                port
-            }, (res) => {
+                port,
+            }, res => {
                 const statusCodeType = Number(res.statusCode.toString()[0]);
 
                 if ([2, 3, 4].includes(statusCodeType) || statusCodeType === 5) {
@@ -139,7 +139,7 @@ class PhpDevelopmentServerConnection {
         }
 
         // Check the PHP binary version.
-        binVersionCheck(`"${options.bin}"`, '>=5.4', (err) => {
+        binVersionCheck(`"${options.bin}"`, '>=5.4', err => {
             // If the PHP version is not satisfactory, return an error to the callback.
             if (err) {
                 cb(err);
@@ -153,11 +153,11 @@ class PhpDevelopmentServerConnection {
                     this.status = Status.STARTING;
                     this.childProcess = childProcess.spawn(options.bin, args, {
                         cwd: '.',
-                        stdio: 'pipe' // Change stdio to 'pipe' to manually handle stdout
+                        stdio: 'pipe', // Change stdio to 'pipe' to manually handle stdout
                     });
 
                     // Handle server output from stderr.
-                    this.childProcess.stderr.on('data', (data) => {
+                    this.childProcess.stderr.on('data', data => {
                         let str = data.toString().trim();
 
                         if (!str) return;
@@ -201,6 +201,7 @@ class PhpDevelopmentServerConnection {
                         const phpVersion = stdout.split('\n')[0];
 
                         // Log the PHP version.
+                        /* eslint-disable space-in-parens */
                         console.log(chalk.gray(` ${'='.repeat(70)}` ));
                         console.log(`   PHP Build: ${chalk.green(phpVersion)}`);
                         console.log(`  Custom INI: ${options.ini ? chalk.green('Yes') : chalk.red('No')}`);
@@ -210,8 +211,8 @@ class PhpDevelopmentServerConnection {
                             console.log(`  Router Script: ${chalk.green(options.router)}`);
                         }
                         console.log(`  Server Start Time: ${chalk.green(new Date().toLocaleTimeString())}`);
-
                         console.log(chalk.gray(` ${'='.repeat(70)}` ));
+                        /* eslint-enable space-in-parens */
 
                     }
                 });
