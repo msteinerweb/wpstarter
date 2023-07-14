@@ -20,7 +20,7 @@ function devServer() {
         base: './build/wordpress',
         port: 3020,
         bin: wpstarter.phpbin, // 'php7.2' for example
-        ini: path.join(__dirname, '../../../php.ini'),
+        ini: path.join(__dirname, '../../php.ini'),
         logErrorsOnly: true,
     });
 
