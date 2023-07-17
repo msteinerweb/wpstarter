@@ -1,0 +1,20 @@
+{
+    "name": "WPStarter",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "wordpress",
+    "workspaceFolder": "/var/www/html",
+    "forwardPorts": [3001, 3010, 3020],
+    "mounts": ["source=${localWorkspaceFolder},target=/var/www/html"],
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.shell.linux": "/bin/bash"
+              },
+              "extensions": [
+                "felixfbecker.php-intellisense",
+                "bmewburn.vscode-intelephense-client",
+                "editorconfig.editorconfig"
+            ]
+        }
+    }
+}

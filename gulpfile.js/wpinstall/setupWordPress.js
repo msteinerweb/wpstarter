@@ -13,7 +13,7 @@ async function setupWordPress() {
 
 
     // create wp-config.php
-    await execa('wp', ['config', 'create', `--dbname=${config.database.dbname}`, `--dbuser=${config.database.dbuser}`, `--dbpass=${config.database.dbpass}`, `--dbhost=${config.database.dbhost}`, '--extra-php=define( \'DISABLE_WP_CRON\', true );'], execOptions);
+    await execa('wp', ['config', 'create', `--dbname=${config.database.dbname}`, `--dbuser=${config.database.dbuser}`, `--dbpass=${config.database.dbpass}`, `--dbhost=${config.database.dbhost}`], execOptions);
 
 
     // check if WordPress is installed

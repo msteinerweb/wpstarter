@@ -16,10 +16,10 @@ config.wpstarter.phpbin = 'php';
 
 
 config.database = {};
-config.database.dbname = 'test';
-config.database.dbuser = 'root';
-config.database.dbpass = '123456789';
-config.database.dbhost = 'localhost';
+config.database.dbname = 'wordpress';
+config.database.dbuser = 'wordpress';
+config.database.dbpass = 'wordpress';
+config.database.dbhost = 'db';
 config.database.dbprefix = 'wp_';
 
 
