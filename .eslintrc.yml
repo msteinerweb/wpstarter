@@ -1,5 +1,9 @@
 # Import and use airbnb code style
-extends: airbnb-base
+extends:
+    - airbnb-base
+    - plugin:@wordpress/wordpress
+
+
 
 plugins:
     - import
@@ -15,10 +19,13 @@ env:
 globals:
     $: true
     jQuery: true
+    wp: true
 
 parserOptions:
     ecmaVersion: 2021
     sourceType: module
+    ecmaFeatures:
+      jsx: true
 
 rules:
     # Requires braces around arrow functions
