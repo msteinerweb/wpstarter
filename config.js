@@ -1,14 +1,18 @@
 
-const config = {}
+const config = {};
 
-
-config.site = {}
+config.site = {};
 config.site.title = 'Website Title';
 config.site.blogdescription = 'Just another WordPress site';
 config.site.theme_name = 'WPStarter';
 config.site.admin_user = 'admin';
 config.site.admin_password = '123456789';
 config.site.admin_email = 'info@example.com';
+
+
+config.wpstarter = {};
+config.wpstarter.webp_support = true;
+config.wpstarter.phpbin = 'php'; // path to php binary
 
 
 config.database = {};

@@ -1,8 +1,9 @@
-const { site } = require('../../config');
 const { watch, series } = require('gulp');
-const PhpDevelopmentServerConnection = require('./php/connect');
 const browserSync = require('browser-sync');
 const path = require('path');
+const PhpDevelopmentServerConnection = require('../util/phpconnect');
+
+const { site, wpstarter } = require('../../config');
 
 const css = require('./css');
 const javascript = require('./javascript');
@@ -18,8 +19,8 @@ function devServer() {
     const server = new PhpDevelopmentServerConnection({
         base: './build/wordpress',
         port: 3020,
-        bin: 'php', // 'php7.2' for example
-        ini: path.join(__dirname, './php/php.ini'),
+        bin: wpstarter.phpbin, // 'php7.2' for example
+        ini: path.join(__dirname, '../../php.ini'),
         logErrorsOnly: true,
     });
 
@@ -27,7 +28,7 @@ function devServer() {
     server.server(() => {
         browserSync({
             logPrefix: `🚀 ${site.title}`,
-            proxy: `127.0.0.1:3020`,
+            proxy: '127.0.0.1:3020',
             port: '3010',
             open: 'local',
             ghostMode: false,

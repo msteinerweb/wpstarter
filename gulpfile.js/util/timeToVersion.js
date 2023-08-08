@@ -1,3 +1,12 @@
+/**
+ * Generates a version string based on the current date and time.
+ *
+ * @function timeToVersion
+ * @returns {string} The version string in the format of 'YYYY-MM-DD_hh:mm:ss'
+ * @example
+ * // returns '2023-07-11_14:25:30'
+ * timeToVersion();
+ */
 function timeToVersion() {
     const date = new Date();
     const year = date.getFullYear();

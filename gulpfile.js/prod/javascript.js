@@ -1,10 +1,11 @@
-const { site } = require('../../config');
 const { dest } = require('gulp');
 const browserify = require('browserify');
 const source = require('vinyl-source-stream');
 const buffer = require('vinyl-buffer');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
+
+const { site } = require('../../config');
 
 function javascript() {
 
