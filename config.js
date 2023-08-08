@@ -12,7 +12,7 @@ config.site.admin_email = 'info@example.com';
 
 config.wpstarter = {};
 config.wpstarter.webp_support = true;
-config.wpstarter.phpbin = 'php';
+config.wpstarter.phpbin = 'php'; // path to php binary
 
 
 config.database = {};
