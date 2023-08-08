@@ -33,3 +33,18 @@ function add_slug_body_class($classes) {
     return $classes;
 }
 add_filter('body_class', 'add_slug_body_class');
+
+
+// add custom blocks
+function wpstarter_enqueue_block_editor_assets() {
+    wp_enqueue_script(
+        'wpstarter-blocks', // Handle
+        get_template_directory_uri() . '/blocks/example.js', // File path
+        array('wp-blocks', 'wp-element', 'wp-editor'), // Dependencies
+        filemtime(get_template_directory() . '/blocks/example.js'), // Version number, using the file modification time
+        true // Enqueue the script in the footer
+    );
+}
+
+// Hook the function into the block editor assets
+add_action('enqueue_block_editor_assets', 'wpstarter_enqueue_block_editor_assets');
