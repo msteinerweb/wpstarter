@@ -7,6 +7,7 @@ const { site, wpstarter } = require('../../config');
 
 const css = require('./css');
 const javascript = require('./javascript');
+const blocks = require('./blocks');
 const img = require('./img');
 const fonts = require('./fonts');
 const theme = require('./theme');
@@ -40,6 +41,7 @@ function devServer() {
     watch('./src/assets/js/**', series(javascript, reload));
     watch('./src/assets/img/**', series(img, reload));
     watch('./src/assets/fonts/**', series(fonts, reload));
+    watch('./src/blocks/**', series(blocks, reload));
     watch('./src/theme/**', series(theme, reload));
     watch('./src/plugins/**', series(plugins, reload));
     watch('./build/wordpress/**/*.php', reload);
