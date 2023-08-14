@@ -43,8 +43,8 @@
             ]
         },
         "layout": {
-            "contentSize": null,
-            "wideSize": null
+            "contentSize": "1300px",
+            "wideSize": "100%"
         },
         "spacing": {
             "blockGap": null,
