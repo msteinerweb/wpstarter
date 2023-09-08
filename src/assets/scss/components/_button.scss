@@ -1,11 +1,11 @@
 .btn {
     $default-btn-color: $gray-200;
-    $btn-padding-x: 10px;
-    $btn-padding-y: 40px;
+    $btn-padding-x: 40px;
+    $btn-padding-y: 10px;
     $darken-on-hover: 5%;
     $ghost-border-width: 1px;
 
-    padding: $btn-padding-x $btn-padding-y;
+    padding: $btn-padding-y $btn-padding-x;
     background-color: $default-btn-color;
     color: contrast-color($default-btn-color);
     display: inline-block;
@@ -26,7 +26,7 @@
     }
 
     &.btn-arrow {
-        padding-right: $btn-padding-y - 10px;
+        padding-right: $btn-padding-x - 10px;
 
         &::after {
             content: "\f054";
