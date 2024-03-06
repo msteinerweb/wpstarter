@@ -1,6 +1,6 @@
 {
   "name": "wp-starter",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,8 +10,12 @@
     "dev": "gulp dev",
     "prod": "gulp prod"
   },
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/msteinerweb/wpstarter.git"
+  },
+  "author": "Matt Steiner",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.17.12",
     "@babel/preset-env": "^7.22.10",
