@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WPStarter Dev Server Test</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h1 class="mb-0">🚀 WPStarter Dev Server</h1>
+                    </div>
+                    <div class="card-body">
+                        <h2>Development Server Status</h2>
+                        <div class="alert alert-success">
+                            <strong>✅ Vite Dev Server:</strong> Running on port 3000
+                        </div>
+
+                        <h3 class="mt-4">What's Working:</h3>
+                        <ul>
+                            <li>⚡ Vite 6 with Hot Module Replacement (HMR)</li>
+                            <li>🎨 SCSS compilation with live reload</li>
+                            <li>📦 JavaScript/React compilation</li>
+                            <li>🔄 Automatic browser refresh for changes</li>
+                            <li>🗺️ Source maps for debugging</li>
+                        </ul>
+
+                        <h3 class="mt-4">Test It Out:</h3>
+                        <div id="app"></div>
+
+                        <div class="alert alert-info mt-3">
+                            <strong>To test HMR:</strong>
+                            <ol>
+                                <li>Edit <code>src/assets/js/main.js</code></li>
+                                <li>Edit <code>src/assets/scss/style.scss</code></li>
+                                <li>Watch the page update instantly!</li>
+                            </ol>
+                        </div>
+
+                        <h3 class="mt-4">For Full WordPress Testing:</h3>
+                        <div class="alert alert-warning">
+                            <strong>⚠️ Note:</strong> This environment doesn't have MySQL or wp-cli installed.
+                            <br><br>
+                            On your local machine with MySQL and wp-cli:
+                            <pre class="mt-2"><code>npm run wpinstall  # Install WordPress
+cd build/wordpress
+php -S localhost:8080  # Start PHP server</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/src/assets/js/main.js"></script>
+</body>
+</html>
