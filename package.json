@@ -11,9 +11,15 @@
     "build": "vite build",
     "preview": "vite preview",
     "prod": "npm run build && gulp prod",
-    "lint:js": "eslint src/**/*.js",
-    "lint:css": "stylelint src/**/*.scss",
-    "format": "prettier --write \"src/**/*.{js,jsx,scss,css,json}\""
+    "clean": "gulp clean",
+    "lint": "npm run lint:js && npm run lint:css",
+    "lint:js": "eslint \"src/**/*.{js,jsx}\"",
+    "lint:js:fix": "eslint \"src/**/*.{js,jsx}\" --fix",
+    "lint:css": "stylelint \"src/**/*.{css,scss}\"",
+    "lint:css:fix": "stylelint \"src/**/*.{css,scss}\" --fix",
+    "format": "prettier --write \"src/**/*.{js,jsx,scss,css,json,php}\"",
+    "format:check": "prettier --check \"src/**/*.{js,jsx,scss,css,json,php}\"",
+    "validate": "npm run format:check && npm run lint && npm run build"
   },
   "repository": {
     "type": "git",
