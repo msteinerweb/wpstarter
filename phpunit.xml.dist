@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.5/phpunit.xsd"
+    bootstrap="tests/php/bootstrap.php"
+    colors="true"
+    beStrictAboutOutputDuringTests="true"
+    beStrictAboutTodoAnnotatedTests="true"
+    failOnRisky="true"
+    failOnWarning="true"
+>
+    <testsuites>
+        <testsuite name="WPStarter">
+            <directory>tests/php</directory>
+        </testsuite>
+    </testsuites>
+
+    <coverage>
+        <report>
+            <html outputDirectory="tests/coverage/php"/>
+            <text outputFile="php://stdout"/>
+        </report>
+    </coverage>
+
+    <php>
+        <const name="WP_TESTS_DIR" value="./tests/wordpress-tests-lib"/>
+        <const name="WP_TESTS_DOMAIN" value="wpstarter.test"/>
+        <const name="WP_TESTS_TABLE_PREFIX" value="wptests_"/>
+        <const name="WP_TESTS_MULTISITE" value="0"/>
+        <const name="WP_PHP_BINARY" value="php"/>
+    </php>
+</phpunit>

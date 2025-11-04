@@ -33,3 +33,12 @@ node_modules
 npm-debug.log
 
 *.map
+
+# Test Coverage
+tests/coverage
+coverage
+.nyc_output
+
+# WordPress Test Suite
+tests/wordpress-tests-lib
+/tmp/wordpress
