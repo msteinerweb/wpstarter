@@ -1,0 +1,21 @@
+# Dependencies
+node_modules
+package-lock.json
+
+# Build outputs
+build
+dist
+*.zip
+
+# WordPress core
+build/wordpress
+
+# Backups
+backups
+
+# Logs
+*.log
+
+# IDE
+.vscode
+.idea

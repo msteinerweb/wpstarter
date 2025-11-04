@@ -6,6 +6,9 @@ tmp
 backups
 wp-config.php
 
+# Environment Variables
+.env
+
 # IDE & Editors
 .idea
 .vscode

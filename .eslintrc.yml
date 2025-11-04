@@ -2,11 +2,11 @@
 extends:
     - airbnb-base
     - plugin:@wordpress/wordpress
-
-
+    - plugin:prettier/recommended
 
 plugins:
     - import
+    - prettier
 
 env:
     es6: true
@@ -22,7 +22,7 @@ globals:
     wp: true
 
 parserOptions:
-    ecmaVersion: 2021
+    ecmaVersion: 2022
     sourceType: module
     ecmaFeatures:
       jsx: true
@@ -83,11 +83,8 @@ rules:
           # Also check require statements
           commonjs: true
 
-    # make sure spaces are 4 instead of tabs
-    indent:
-        - error
-        - 4
-        - SwitchCase: 1
+    # make sure spaces are 4 instead of tabs (handled by Prettier)
+    indent: off
 
     # prevent LF vs CRLF errors
     linebreak-style: 0
